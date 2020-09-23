@@ -1,21 +1,22 @@
 <template>
     <div id="songList">
-        <h1>Choose a song from Song List</h1>
-        <song-list  v-for= "song in songs" :key=" song" :song= song :iswishlist= "false" />
-
+        <h2>List of Songs in the Library</h2>
+        <div>
+        <song-item  v-for= "song in songs" :key=" song.artist" :song= song :iswishlist= "false" />
+        </div>
     </div>
 </template>
 
 <script>
-import songItem from './songcart.vue';
+import SongItem from './songcart.vue';
 export default {
     name: "song-list",
     components:{
-        songItem
+        SongItem
     },
     computed:{
         songs:function(){
-            return this.$store.state.songs;
+            return this.$store.state.songlist;
         }
     }
 }
@@ -24,6 +25,9 @@ export default {
 <style scoped>
     #songList{
         border: 3px solid black;
+    }
+    h2{
+        color:brown
     }
 
 

@@ -1,7 +1,7 @@
 <template>
    <div id="song">
-    <h2> {{ song.artist }}</h2>
-    <h3> {{ song.song }}</h3>
+    <h4> {{ song.artist }}</h4>
+    <h4> {{ song.song }}</h4>
 
     <button @click="addToWishlist(song)"  v-if="!iswishlist"> Add to the Wish List </button>
     <button @click="removefromwishlist(song)" v-else> Remove from the Wish List </button>

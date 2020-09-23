@@ -1,17 +1,16 @@
 <template>
     <div id>
-        <h1>Songs list</h1>
+        <h1>Music Library of Golden Era</h1>
         <div id="content">
-        <play-list/>
         <wish-list/>
-       
+        <song-list/>      
         </div>
     </div>
 </template>
 
 <script>
-import WishList from "./components/wishlist.vue";
-import SongList from "./components/songlist.vue";
+import WishList from "./songlist";
+import SongList from "./wishlist";
 
 export default {
     name: "page-body",
@@ -27,6 +26,9 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: beige;
+    }
+    h1{
+        color: crimson;
     }
 
 </style>

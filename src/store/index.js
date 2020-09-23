@@ -20,7 +20,7 @@ export default new Vuex.Store({
     fromwishlist: function (state, deletedSong) {
       state.songlist.push(deletedSong);
       for (let i = 0; i < state.wishlist.length; i++) {
-        if (state.wishlist[i] == deletedSongs) {
+        if (state.wishlist[i] == deletedSong) {
           state.wishlist.splice(i, 1);
         }
       }
